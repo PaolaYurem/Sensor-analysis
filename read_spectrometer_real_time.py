@@ -23,16 +23,16 @@ try:
         # Acquire data
         wavelengths = spec.wavelengths()
         intensities = spec.intensities()
-        # Plot the data
-        plt.clf()  # Clear the previous plot
+        # Plot data
+        plt.clf()
         plt.plot(wavelengths, intensities)
         plt.xlabel('Wavelength (nm)')
         plt.ylabel('Intensity (a.u.)')
         plt.title('Spectrometer Data')
         plt.xlim(580,660)
-        plt.pause(0.01)  # Pause to update the plot
+        plt.pause(0.01)  
         
-except KeyboardInterrupt:
+except KeyboardInterrupt: #CTRL + C
     print("Data acquisition stopped by user.")
 
 finally:
